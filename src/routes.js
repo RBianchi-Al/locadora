@@ -6,13 +6,6 @@ const customers = []
 routes.get("/customers", (req, res) => {
     return res.json(customers)
 })
-routes.get('/customers', (req, res) => {
-    ///req requisicao
-    ///res resposta
-    res.status(200).json({
-        message: "Hello world"
-    })
-})
 
 routes.post('/customers', (req, res) => {
     const { name, cpf, birthday } = req.body
