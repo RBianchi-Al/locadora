@@ -33,14 +33,14 @@ productsRoutes.get('/product/:id', (req, res) => {
 
 productsRoutes.put('/product/:id', (req, res) => {
     const { id } = req.params;
-    const { name, description, quantityStock, quantityAvailable, value} = req.body
+    const {description, quantityStock, quantityAvailable, value} = req.body
     const productId = products.find(prod => prod.id == id)
     if(!productId){
         res.status(httpStatus.NOT_FOUND).json({
             message: "Product not found"
         })
     }
-    productId.name = name;
+  
     productId.description = description;
     productId.quantityStock = quantityStock;
     productId.quantityAvailable = quantityAvailable;
