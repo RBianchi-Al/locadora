@@ -1,12 +1,14 @@
 
 const express = require('express')  ///importar libs ou arquivos objetos com require
-const routes = require('./routes')
 
+const customerRoutes = require('./routes/customer.routes')
+const productsRoutes = require('./routes/products.routes')
 const app = express()  ///colocar () starta o objeto, atribuir ao app o express startado. 
 
 app.use(express.json())
 
-app.use('/', routes)
+app.use('/', customerRoutes)
+app.use('/', productsRoutes)
 
 const port = 3000  ///direcionar a requisicao para uma porta. 
 
