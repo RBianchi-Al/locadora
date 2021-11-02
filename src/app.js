@@ -1,8 +1,8 @@
 
 const express = require('express')  ///importar libs ou arquivos objetos com require
 
-const customerRoutes = require('./routes/customer.routes')
-const productsRoutes = require('./routes/products.routes')
+const customerRoutes = require('./customer/customer.routes')
+const productsRoutes = require('./products/products.routes')
 const app = express()  ///colocar () starta o objeto, atribuir ao app o express startado. 
 
 app.use(express.json())
